@@ -6,7 +6,7 @@ services:
 
 
 before_install:
-  - docker build -t adam/docker-react -f Dockerfile.dev .
+  - docker build -t adam/docker-react .
 
 script:
   - docker run adam/docker-react npm run test -- --coverage
