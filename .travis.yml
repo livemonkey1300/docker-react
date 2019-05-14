@@ -1,0 +1,10 @@
+#start
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t adam/docker-react -f Dockerfile .
+
+script:
+  - docker run adam/docker-react npm run test -- --coverage
