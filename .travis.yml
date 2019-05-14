@@ -7,4 +7,4 @@ before_install:
   - docker build -t adam/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run adam/docker-react npm run test -- --coverage
+  - docker run adam/docker-react npm test -- --coverage
