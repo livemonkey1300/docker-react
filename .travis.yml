@@ -5,9 +5,7 @@ services:
 
 before_install:
   - docker build -t adam/docker-react .
-
-script:
-  - docker run adam/docker-react
+  - docker run -d -p 80:80 adam/docker-react
 
 
 deploy:
